@@ -11,7 +11,7 @@ $myGrayBlue: #43464C;
 /* colors */
 $linkColor: $myBlueDark;
 $navbarBackground: $myBlueDark;
-$navbarBackgroundHighlight: lighten($navbarBackground, 30);
+$navbarBackgroundHighlight: lighten($navbarBackground, 20);
 $navbarLinkColor: darken($myWhite, 10);
 $navbarLinkColorHover: $myWhite;
 $dropdownBackground: $myBlueDark;
@@ -31,7 +31,7 @@ p {
     margin-bottom: 20px;
 }
 .main{
-    background-color: #FFF;
+    background-color: #FFFFFF;
     border: 1px solid #ECEDEE;
     padding: 25px;
 

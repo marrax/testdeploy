@@ -21,11 +21,11 @@ $hrBorder: $myBlue;
 $heroUnitBackground: lighten($myWhite, 20);
 $dropdownLinkColorHover: $myWhite;
 body {
-  background: asset-url('bg-main.jpg', image) };
-.span12, .container{
-    width: 940px;
-}
+ background: asset-url('bg-main.jpg', image) };
 
+.navbar {
+ font-size:16px;
+}
 
 p {
     margin-bottom: 20px;
@@ -53,7 +53,7 @@ p {
 }
 
 .logo-title{
-    font-size:30px;
+    font-size:40px;
 }
 
 .slogan{

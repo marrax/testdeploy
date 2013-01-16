@@ -6,7 +6,7 @@ server "192.168.1.163", :web, :app, :db, primary: true
 set :application, "testdeploy"
 set :repository,  "git@github.com:marrax/testdeploy.git"
 set :user, "deployer"
-set :deploy_to, "/ra/testdeploy"
+set :deploy_to, "/railsapps/testdeploy"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :scm, "git"
@@ -41,7 +41,7 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    puts "Now edit the config files in #{shared_path}."
+    puts "Now edit the database config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
 

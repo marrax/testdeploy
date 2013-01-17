@@ -43,3 +43,5 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
+gem 'active_attr'
+gem 'simple_form'

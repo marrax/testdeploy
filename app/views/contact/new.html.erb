@@ -18,38 +18,16 @@
                     <div class="row">
 
 
-                        <div class="span9">
-                            <form class="form-horizontal">
-                                <fieldset>
- 				<%= form_for @message, :url => contact_path do |form| %>
-  <fieldset class="fields">
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-    
-    <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
-    </div>
-    <div class="field">
-      <%= form.label :subject %>
-      <%= form.text_field :subject %>
-    </div>
-    
-    <div class="field">
-      <%= form.label :body %>
-      <%= form.text_area :body %>
-    </div>
-  </fieldset>
-  
-  <fieldset class="actions">
-    <%= form.submit "Send" %>
-  </fieldset>
-<% end %>
-                                </fieldset>
-                            </form>
+                        <div class="span6">
+                        <fieldset>
+                          <%= simple_form_for @message, :html => {:class => "form-horizontal"}, :url => contact_path do |form| %>
+                          <%= form.input :name, :label => 'First Name', :placeholder => 'Your first name.', :input_html => {:class => "span6"}  %>
+                          <%= form.input :email, :label => 'Email address:', :placeholder => 'your email address.', :input_html => {:class => "span6"} %>
+                          <%= form.input :body , :label => 'Enquiry:', :as => :text, :placeholder => 'What you would like to contact us about.', :input_html => {:cols => 50, :rows =>5, :class => 'input-xlarge-focused span6 '} %>
 
+                          <%= form.button :submit, :label => 'Send Enquiry',  :class =>  "btn btn-primary pull-right"  %> 
+                          <% end %>
+                        </fieldset>
                         </div>
                     </div><!-- /row -->
 		</div>
